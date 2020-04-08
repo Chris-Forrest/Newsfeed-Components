@@ -112,3 +112,19 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+/*************make a function ******************/
+function makeNewsArticle ({title, date, content}){
+
+  /*************instantiate the elements************ */
+
+
+  const article = document.createElement('div')
+  const articleTitle = document.createElement('h2')
+  const articleDate = document.createElement('p')
+  const articleContent = document.createElement('p')
+
+/****************setup  ************************/
+
+
+
+}
