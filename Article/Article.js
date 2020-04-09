@@ -151,9 +151,15 @@ articleContent.textContent = thirdParagraph
 
 
 /****************toggle event*********************************/
+const buttonToggle = () => {
+  article.classList.toggle('article-open')
+}
+expandButton.addEventListener('click', buttonToggle)
 
-
+return article
 
 }
+
+/******************making the map function ********************/
 
 makeNewsArticle ({})
