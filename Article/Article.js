@@ -160,6 +160,11 @@ return article
 
 }
 
-/******************making the map function ********************/
+/******************making the map function ***********************/
 
-makeNewsArticle ({})
+const articles = document.querySelector('.articles')
+const articleElements = data.map(articleData =>{
+  return makeComponent({title:articleData.title, date:articleData.date, articleContent:articleData.firstParagraph, articleContent:articleData.secondParagraph, articleContent:articleData.thirdParagraph })
+})
+
+
