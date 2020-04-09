@@ -122,9 +122,23 @@ function makeNewsArticle ({title, date, content}){
   const articleTitle = document.createElement('h2')
   const articleDate = document.createElement('p')
   const articleContent = document.createElement('p')
+  const expandButton = document.createElement('span')
 
-/****************setup  ************************/
+/****************setup structure of the elements ********************/
+
+article.appendChild(articleTitle)
+article.appendChild(articleDate)
+article.appendChild(articleContent)
+article.appendChild(articleContent)
+article.appendChild(articleContent)
+article.appendChild(expandButton)
+
+
+/**************************adding classes to elements*************/
+
 
 
 
 }
+
+makeNewsArticle ({})
