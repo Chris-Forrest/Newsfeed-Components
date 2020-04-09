@@ -113,7 +113,7 @@ const data = [
 
 */
 /*************make a function ******************/
-function makeNewsArticle ({title, date, content}){
+function makeNewsArticle ({title, date, firstParagraph, secondParagraph, thirdParagraph}){
 
   /*************instantiate the elements************ */
 
@@ -141,7 +141,17 @@ articleDate.classList.add('date')
 expandButton.classList.add('expandButton')
 
 
-/*********************** */
+/***********************set text content*************************/
+
+articleTitle.textContent = title
+articleDate.textContent = date
+articleContent.textContent = firstParagraph
+articleContent.textContent = secondParagraph
+articleContent.textContent = thirdParagraph
+
+
+/****************toggle event*********************************/
+
 
 
 }
