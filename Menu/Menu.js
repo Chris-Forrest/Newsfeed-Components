@@ -33,32 +33,38 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
-/*********************function*************************/
-function makeMenu(menuItems){
+/*********************create function*******************/
+function createMenu(menuItems) {
 
-/*************make elements ***************************/
+/*****************Create elements**********************/
+  const menu = document.createElement('div');
+  const unorderedList = document.createElement('ul');
 
-const menu = document.createElement('div')
-const unorderedList = document.createElement('ul')
+/***************Add the menu class *******************/
+  menu.classList.add('menu');
+  
+/****************Populate the menu ******************/
+  menuItems.forEach(menuItem => {
+    const newLi = document.createElement('li');
+    newLi.textContent = menuItem;
+    unorderedList.appendChild(newLi);
+  });
 
-/********************** structure ****************/
+  /*************Add unorderedList to the menu****************/
+  menu.appendChild(unorderedList);
 
-menu.appendChild(ul)
-
-/**************add class ************************/
-
-menu.classList('.menu')
-
-/********************* use forEach to populat ul  ***********/
-
-menuItems.forEach(menuIems => {
-  const menuList = document.createElement('li')
-  menuList.textContent = menuItems
-  unorderedList.append(menuList)
-
-})
-
-
-
-
+/****************** Add event listener   ********************/
+  const menuButton = document.querySelector('.menu-button');
+  menuButton.addEventListener('click', function() {
+    menu.classList.toggle('menu--open');
+  });
+  
+  return menu;
 }
+
+/*********************add menu component  ********************/
+
+const headerDiv = document.querySelector('.header');
+const menu = createMenu(menuItems);
+headerDiv.appendChild(menu);
+
