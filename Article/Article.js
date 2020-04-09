@@ -167,7 +167,7 @@ return article
 
 const articles = document.querySelector('.articles')
 const articleElements = data.map(articleData =>{
-  return makeNewsArticle({title:articleData.title, date:articleData.date, firstParagraph:articleData.firstParagraph, paragraph2:articleData.secondParagraph, paragraph3:articleData.thirdParagraph })
+  return makeNewsArticle({title:articleData.title, date:articleData.date, firstParagraph:articleData.firstParagraph, secondParagraph:articleData.secondParagraph, thirdParagraph:articleData.thirdParagraph })
 })
 
 /******************make a new article *********************/
