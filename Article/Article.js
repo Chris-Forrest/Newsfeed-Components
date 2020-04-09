@@ -121,16 +121,18 @@ function makeNewsArticle ({title, date, firstParagraph, secondParagraph, thirdPa
   const article = document.createElement('div')
   const articleTitle = document.createElement('h2')
   const articleDate = document.createElement('p')
-  const articleContent = document.createElement('p')
+  const paragraph1 = document.createElement('p')
+  const paragraph2 = document.createElement('p')
+  const paragraph3 = document.createElement('p')
   const expandButton = document.createElement('span')
 
 /****************setup structure of the elements ********************/
 
 article.appendChild(articleTitle)
 article.appendChild(articleDate)
-article.appendChild(articleContent)
-article.appendChild(articleContent)
-article.appendChild(articleContent)
+article.appendChild(paragraph1)
+article.appendChild(paragraph2)
+article.appendChild(paragraph3)
 article.appendChild(expandButton)
 
 
@@ -145,9 +147,10 @@ expandButton.classList.add('expandButton')
 
 articleTitle.textContent = title
 articleDate.textContent = date
-articleContent.textContent = firstParagraph
-articleContent.textContent = secondParagraph
-articleContent.textContent = thirdParagraph
+paragraph1.textContent = firstParagraph
+paragraph2.textContent = secondParagraph
+paragraph3.textContent = thirdParagraph
+expandButton.textContent = 'click to read'
 
 
 /****************toggle event*********************************/
@@ -164,7 +167,15 @@ return article
 
 const articles = document.querySelector('.articles')
 const articleElements = data.map(articleData =>{
-  return makeComponent({title:articleData.title, date:articleData.date, articleContent:articleData.firstParagraph, articleContent:articleData.secondParagraph, articleContent:articleData.thirdParagraph })
+  return makeNewsArticle({title:articleData.title, date:articleData.date, firstParagraph:articleData.firstParagraph, paragraph2:articleData.secondParagraph, paragraph3:articleData.thirdParagraph })
 })
+
+/******************make a new article *********************/
+
+
+articleElements.forEach(articleElement => {
+  articles.appendChild(articleElement)
+});
+
 
 
