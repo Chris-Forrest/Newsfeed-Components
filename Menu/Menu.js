@@ -50,4 +50,15 @@ menu.appendChild(ul)
 menu.classList('.menu')
 
 /********************* use forEach to populat ul  ***********/
+
+menuItems.forEach(menuIems => {
+  const menuList = document.createElement('li')
+  menuList.textContent = menuItems
+  unorderedList.append(menuList)
+
+})
+
+
+
+
 }
