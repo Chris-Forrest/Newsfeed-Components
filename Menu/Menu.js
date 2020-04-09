@@ -40,14 +40,14 @@ function makeMenu(menuItems){
 
 const menu = document.createElement('div')
 const unorderedList = document.createElement('ul')
-const listItem1 = document.createElement('li')
-const listItem2 = document.createElement('li')
-const listItem3 = document.createElement('li')
-const listItem4 = document.createElement('li')
-const listItem5 = document.createElement('li')
-const listItem6 = document.createElement('li')
 
+/********************** structure ****************/
 
+menu.appendChild(ul)
 
+/**************add class ************************/
 
+menu.classList('.menu')
+
+/********************* use forEach to populat ul  ***********/
 }
