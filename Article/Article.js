@@ -136,7 +136,12 @@ article.appendChild(expandButton)
 
 /**************************adding classes to elements*************/
 
+article.classList.add('article')
+articleDate.classList.add('date')
+expandButton.classList.add('expandButton')
 
+
+/*********************** */
 
 
 }
